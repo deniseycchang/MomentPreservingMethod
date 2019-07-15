@@ -37,15 +37,10 @@ def momentpreserving(imgpath):
     
     img = cv2.imread(imgpath,0)
     
-    plt.hist(img.ravel(), N,[0, N]); plt.show()
-    
-    
     img1D = img.ravel()
-    histimg = np.zeros((N,), dtype=np.int)
+    plt.hist(img1D, N,[0, N]); plt.show()
     
-    for i in range(0, len(img1D)):
-        histimg[img1D[i]] += 1
-    
+    histimg, _ = np.histogram(img1D, bins=np.arange(257))
     
     m0 = 1
     m1 = 0
