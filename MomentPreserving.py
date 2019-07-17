@@ -49,7 +49,6 @@ def momentpreserving(imgpath):
     m4 = 0
     m5 = 0
     
-    
     for i in range(0, N):
         
         m1 = m1 + i * histimg[i]/len(img1D)
@@ -57,7 +56,6 @@ def momentpreserving(imgpath):
         m3 = m3 + i * i * i * histimg[i]/len(img1D)
         m4 = m4 + i * i * i * i * histimg[i]/len(img1D)
         m5 = m5 + i* i * i * i * i * histimg[i]/len(img1D)
-    
       
     ################## Bilevel ####################################
     
@@ -66,7 +64,6 @@ def momentpreserving(imgpath):
     c1 = (m0 * -m3 + m2 * m1) / cd
     z0 = 0.5 * (-c1 - math.sqrt(c1 * c1 - 4.0 * c0))
     z1 = 0.5 * (-c1 + math.sqrt(c1 * c1 - 4.0 * c0))
-    
     
     p0 = (z1 - m1) / (z1 - z0);
     
@@ -81,7 +78,6 @@ def momentpreserving(imgpath):
             break
     print(threshold)  
         
-    
     pixgrey = np.zeros((W, L), 'uint8')
     
     
@@ -104,7 +100,6 @@ def momentpreserving(imgpath):
     ax1.imshow(pixgrey, cmap=plt.cm.gray)
     ax0.set_title(imgtitle)
     f.set_size_inches(4, 6)
-    
     
     ################## Trilevel ####################################
 
@@ -131,8 +126,7 @@ def momentpreserving(imgpath):
     #print('B: ', B)
     
     W1 = complex(-0.5, math.sqrt(3)/2)
-    
-    
+        
     W2 = complex(-0.5, -math.sqrt(3)/2)
     
     
@@ -151,10 +145,7 @@ def momentpreserving(imgpath):
     
     p1 = 1/pd * np.linalg.det([[1, m0, 1],[z0, m1, z2],[z0**2, m2, z2**2]])
     
-#    p2 = 1 - p0 - p1
-    
-    partialsum = 0
-    
+    partialsum = 0  
     
     for i in range(0, N):
         partialsum += histimg[i]/len(img1D)
@@ -168,7 +159,6 @@ def momentpreserving(imgpath):
         if partialsum > p1:
             threshold2 = i
             break
-
     
     pixtri = np.zeros(( W, L), 'uint8')
     
@@ -176,7 +166,6 @@ def momentpreserving(imgpath):
         for j in range(0, W):
             if img[j, i] < threshold1:
                 pixtri[j, i] = z0
-    
             elif img[j, i] < threshold2:
     
                 pixtri[j, i] = z1
