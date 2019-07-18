@@ -7,7 +7,6 @@ import cmath
 from skimage import io
 from skimage import color
 
-
 def calculateA(c0, c1, c2):
     
     A1 = c0/2 - c1*c2/6 + (c2**3)/27
@@ -22,7 +21,6 @@ def calculateB(A, c1, c2):
     B = -(c1/3 - c2**2 / 9) / A
     
     return B
-
 
 def momentpreserving(imgpath):
 
@@ -92,7 +90,6 @@ def momentpreserving(imgpath):
     imgtitle = 'threshold: ' + str(threshold) + ', z0 = ' \
             + str(int(round(z0))) + ', z1 = ' + str(int(round(z1)))
     
-    
     f, (ax0, ax1) = plt.subplots(2, 1, \
                                       subplot_kw={'xticks': [], 'yticks': []})
     
@@ -102,7 +99,6 @@ def momentpreserving(imgpath):
     f.set_size_inches(4, 6)
     
     ################## Trilevel ####################################
-
     
     cd = np.linalg.det(np.array([[m0, m1, m2],[m1, m2, m3],[m2, m3, m4]]))
     
