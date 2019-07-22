@@ -32,7 +32,6 @@ def momentpreserving(imgpath):
     
     (W, L) = imggray.shape
     
-    
     img = cv2.imread(imgpath,0)
     
     img1D = img.ravel()
@@ -128,12 +127,9 @@ def momentpreserving(imgpath):
     
     z0 = -c2/3 - (A+B).real
     
-    
     z1 = -c2/3 - (W1*A + W2*B).real
     
-    
     z2 = -c2/3 - (W2*A + W1*B).real
-    
     
     pd  = np.linalg.det([[1, 1, 1],[z0, z1, z2],[z0**2, z1**2, z2**2]])
     
@@ -180,7 +176,6 @@ def momentpreserving(imgpath):
     bx1.imshow(pixtri, cmap=plt.cm.gray)
     bx0.set_title(imgtitle)
     f2.set_size_inches(4, 6)
-
 
 #### -------------------------------------------------------------------------
 
