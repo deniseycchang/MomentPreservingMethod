@@ -3,4 +3,5 @@ Process gray-level images into bilevel, trilevel in pixel values by computing de
 
 # Reference
 The paper published in 1984: [Moment-Preserving Thresholding: A New Approach](https://people.cs.nctu.edu.tw/~whtsai/Journal%20Paper%20PDFs/Tsai_CVGIP(journal)_1985.pdf).
+
 The [definition](https://www.statisticshowto.datasciencecentral.com/what-is-a-moment/) of Moment.
