@@ -3,7 +3,7 @@ Process gray-level images into bilevel, trilevel in pixel values by computing de
 
 ## Files
 - `MomentPreserving.py`: Implement Moment Preserving Method then generate the output images in **input** folder in bilevel and trilevel.
-- `mountain-sky.jpg`: The input, a grayscale image
+- `mountain-sky.jpg`: The input, a grayscale image.
 
 # Reference
 The paper published in 1984: [Moment-Preserving Thresholding: A New Approach](https://people.cs.nctu.edu.tw/~whtsai/Journal%20Paper%20PDFs/Tsai_CVGIP(journal)_1985.pdf).
