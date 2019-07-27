@@ -1,7 +1,7 @@
 # Moment Preserving Method
 Process gray-level images into bilevel, trilevel in pixel values by computing deterministically and preserving moments of the input pictures.
 
-## Files
+# Files
 - `MomentPreserving.py`: Implement Moment Preserving Method then generate the output images in **input** folder in bilevel and trilevel.
 - `mountain-sky.jpg`: The input, a grayscale image.
 
